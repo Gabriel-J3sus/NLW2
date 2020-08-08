@@ -43,12 +43,12 @@
 
                     <div class="input-block">
                         <label for="avatar"> Link da sua foto <small>(comece com https://)</small></label>
-                        <input name="avatar" id="avatar" type="url" required>
+                        <input name="avatar" id="avatar" type="url" placeholder="http://" required>
                     </div>
 
                     <div class="input-block">
                         <label for="whatsapp"> whatsapp <small>(Somente número)</small> </label>
-                        <input name="whatsapp" id="whatsapp" type="number" required>
+                        <input name="whatsapp" id="whatsapp" type="number" placeholder="(__) _____ ____" required>
                     </div>
 
                     <div class="textarea-block">
@@ -73,16 +73,15 @@
                     </div>
 
                     <div class="input-block">
-                        <label for="cost"> Custo da sua hora/aula 
-                            <small> (R$) </small>
-                        </label>
-                        <input name="cost" type="cost" id="cost" type="number" required>
+                        <label for="cost"> Custo da sua hora/aula </label>
+                        <input name="cost" type="cost" id="cost" type="number" placeholder = "R$"required>
                     </div>
                 </fieldset>
 
                 <fieldset id="schedule-items">
                     <legend> Horários disponíveis
-                        <button type="button" id="add-time"> + Novo Horário</button> 
+                        <button type="button" id="add-time"> + Novo Horário</button>
+                        <button type="button" id="delete-time"> - Novo Horário</button>  
                     </legend>
                     <div class="schedule-item">
                         <div class="select-block">
