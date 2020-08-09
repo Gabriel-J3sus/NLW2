@@ -1,7 +1,23 @@
-document.querySelector("#delete-time").addEventListener("click", deleteField)
+function removeField(element){
 
-function deleteField() {
-    const fieldContainer = document.querySelector('.schedule-item')
+    const scheduleList = document.querySelector("#schedule-items")
+    const itemToRemove = element.parentElement.parentElement
 
-    document.querySelector("#schedule-items").removeChild(fieldContainer)
+    const nextElementSibling = itemToRemove.nextElementSibling
+    const previousElementSibling = itemToRemove.previousElementSibling
+
+    var isOnlyChield = true
+
+    if(nextElementSibling && itemToRemove.className == nextElementSibling.className){
+        isOnlyChield = false
+    }
+
+    if(previousElementSibling && itemToRemove.className == previousElementSibling.className){
+        isOnlyChield = false
+    }
+
+    if(!isOnlyChield){
+        scheduleList.removeChild(itemToRemove)
+    }
+
 }

@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="styles/partials/forms.css">
     <link rel="stylesheet" href="styles/partials/page-give-classes.css">
 
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
     
     <script src = "scripts/addField.js" defer></script>
@@ -81,8 +84,7 @@
 
                 <fieldset id="schedule-items">
                     <legend> Horários disponíveis
-                        <button type="button" id="add-time"> + Novo Horário</button>
-                        <button type="button" id="delete-time"> - Novo Horário</button>  
+                        <button type="button" id="add-time"> + Novo Horário</button>  
                     </legend>
                     <div class="schedule-item">
                         <div class="select-block">
@@ -105,6 +107,9 @@
                         <div class="input-block">
                             <label for="time_to"> Até </label>
                             <input type="time" name="time_to[]" required>
+                        </div>
+                        <div>
+                            <i class="fa fa-trash-o" style="font-size:28px" id="remove-time" onclick="removeField(this)"></i>
                         </div>
                     </div>
                 </fieldset>
